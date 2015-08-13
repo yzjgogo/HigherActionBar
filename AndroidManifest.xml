@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kop.higheractionbar"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 没有引用support包的情况下自定义主题Theme的案例 -->
+        <activity 
+            android:name="com.kop.higheractionbar.CustomActivity"
+            android:theme="@style/CustomActionBarTheme"></activity>
+                <!-- 没有引用support包的情况下自定义ActionBar文本颜色-->
+        <activity 
+            android:name="com.kop.higheractionbar.CustomTextColorActivity"
+            android:theme="@style/CustomActionBarTextColorTheme">
+            
+        </activity>
+        <!-- ActionBar的overlay mode -->
+        <activity 
+            android:name="com.kop.higheractionbar.ActionBarOverLayActivity"
+            android:theme="@style/ActionBarOverLay">
+            
+        </activity>
+    </application>
+
+</manifest>
